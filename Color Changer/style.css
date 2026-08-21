@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 100px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    transition: background-color 0.25s ease;
+}
+
+.main {
+    width: 45%;
+    min-width: 340px;
+    max-width: 650px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 28px;
+    background: #fffdf9;
+    border: 1px solid #ddd8c9;
+    border-radius: 18px;
+    padding: 40px 32px;
+    box-shadow: 0 12px 30px rgba(27, 27, 31, 0.08);
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: #1b1b1f;
+    text-transform: uppercase;
+}
+
+.secondrow {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+button {
+    width: 25%;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.aplycolor {
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+.aplycolor:hover {
+    filter: brightness(1.1);
+}
+
+.rndclr {
+    position: relative;
+    background: #1b1b1f;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.rndclr::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 12px;
+    background: conic-gradient(from 0deg, #e24b4a, #ef9f27, #97c459, #1d9e75, #378add, #7f77dd, #d4537e, #e24b4a);
+    z-index: -1;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+input[type='text'] {
+    height: 44px;
+    width: 55%;
+    text-align: center;
+    border: 1px solid #ddd8c9;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+input[type='text']:focus {
+    border-color: #1d4ed8;
+}
+
+p, span {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Courier New', monospace;
+    background: #f1efe8;
+    color: #1b1b1f;
+    padding: 6px 16px;
+    border-radius: 999px;
+}
