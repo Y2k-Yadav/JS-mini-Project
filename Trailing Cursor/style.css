@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: none;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #1b1b3a, #24243e);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.smallCursor {
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.6);
+}
+
+.shadowCursor {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255, 60, 150, 0.8) 0%, rgba(120, 60, 255, 0) 70%);
+  border-radius: 100%;
+  filter: blur(25px) hue-rotate(0deg);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s linear;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  animation: hueShift 6s linear infinite;
+}
+
+@keyframes hueShift {
+  0% { filter: blur(25px) hue-rotate(0deg); }
+  100% { filter: blur(25px) hue-rotate(360deg); }
+}
