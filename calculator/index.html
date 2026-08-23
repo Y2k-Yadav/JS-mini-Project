@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/dseg@0.46.0/css/dseg.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="row1">
+                0
+            </div>
+            <div class="buttons">
+                <button onclick="clearDisplay()"  class="cancel" id="cancel">C</button>
+                <button onclick="appendValue('+') " class="operator" id="plus">+</button>
+                <button onclick="appendValue('1') " class="num" id="one" ">1</button>
+                <button onclick="appendValue('2') " class="num" id="two">2</button>
+                <button onclick="appendValue('3') " class="num" id="three">3</button>
+                <button onclick="appendValue('-') " class="operator" id="minus">-</button>
+                <button onclick="appendValue('4') " class="num" id="four">4</button>
+                <button onclick="appendValue('5') " class="num" id="five">5</button>
+                <button onclick="appendValue('6') " class="num" id="six">6</button>
+                <button onclick="appendValue('*') " class="operator" id="multiplication">*</button>
+                <button onclick="appendValue('7') " class="num" id="seven">7</button>
+                <button onclick="appendValue('8') " class="num" id="eight">8</button>
+                <button onclick="appendValue('9') " class="num" id="nine">9</button>
+                <button onclick="appendValue('/') " class="operator" id="divide">/</button>
+                <button onclick="appendValue('0') " class="num" id="zero">0</button>
+                <button onclick="appendValue('.') " class="num" id="point">.</button>
+                <button onclick="calculate() " class="operator" id="equal">=</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>

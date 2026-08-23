@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5px 10px;
+  width: 25%;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.635);
+  border-radius: 10px;
+}
+.row1 {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 20%;
+  background-color: #1c1c1c;
+  padding: 5px 20px;
+  margin-block: 5px;
+  color: #00ff88;
+  text-align: end;
+  font-size: 20px;
+}
+.buttons {
+  user-select: none;
+  width: 100%;
+  height: 76%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 5px;
+}
+button {
+  border-radius: 10px;
+  font-size: large;
+  font-weight: 600;
+  font-family: "Segoe UI", Arial, sans-serif;
+  border:none;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+#cancel {
+  grid-column: 1/3;
+}
+#plus {
+  grid-column: 3/5;
+}
+#equal {
+  grid-column: 3/5;
+}
+
+.num {
+  background-color: #e0e0e0;
+  transition:
+    background-color 0.3s ease,
+    color 0.2s ease;
+}
+
+.operator {
+  background-color: #ff9500;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.cancel {
+  background-color: #ff3b30;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+.num:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.operator:hover {
+  cursor: pointer;
+  background-color: #c17006;
+  color: white;
+}
+.cancel:hover {
+  cursor: pointer;
+  background-color: #af0f07;
+  color: white;
+}
